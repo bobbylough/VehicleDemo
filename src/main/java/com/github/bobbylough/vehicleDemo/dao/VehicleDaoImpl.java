@@ -44,6 +44,16 @@ public class VehicleDaoImpl implements VehicleDao {
 		}
 	}
 
+	@Override
+	public Vehicle getVehicle(int id) {
+		try {
+			return (Vehicle) sessionFactory.getCurrentSession().get(Vehicle.class, id);
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+
 
 
 

@@ -14,14 +14,20 @@ public class VehicleServiceImpl implements VehicleService {
 	@Autowired
 	private VehicleDao vehicleDao;
 
+
 	@Override
-	public List<Vehicle> getVehicle() {
+	public List<Vehicle> getVehicles() {
 		return vehicleDao.getAllVehicles();
 	}
 
 	@Override
 	public void saveVehicle(Vehicle vehicle) {
 		vehicleDao.saveVehicle(vehicle);
+	}
+
+	@Override
+	public Vehicle getVehicle(int id) {
+		return vehicleDao.getVehicle(id);
 	}
 
 }

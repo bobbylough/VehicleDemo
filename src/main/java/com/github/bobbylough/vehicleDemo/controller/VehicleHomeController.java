@@ -19,7 +19,7 @@ public class VehicleHomeController {
 	@RequestMapping("/")
 	public ModelAndView index(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
 		ModelAndView mav = new ModelAndView("index");
-		mav.addObject("vehicleList", vehicleService.getVehicle());
+		mav.addObject("vehicleList", vehicleService.getVehicles());
 		return mav;
 	}
 
